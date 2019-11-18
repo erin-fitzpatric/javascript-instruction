@@ -1,0 +1,32 @@
+Create an application that converts number grades to letter grades.
+
+let input= 90;
+let moreGrades = "y";
+
+while (moreGrades == "y") {
+	if (input <= 59) {
+		console.log("Letter grade: F");
+		break;
+		}
+	else if (input < 67) {
+		console.log("Letter grade: D");
+		break;
+		}
+	else if (input < 80) {
+		console.log("Letter grade: C");
+		break;
+		}
+	else if (input < 88) {
+		console.log("Letter grade: B");
+		break;
+		}
+	else {
+		console.log("Letter grade: A");
+		}
+		
+	moreGrades = "n";
+	
+	}
+	
+	console.log("Good bye!");
+
