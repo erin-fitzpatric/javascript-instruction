@@ -1,0 +1,23 @@
+{
+  "name": "javascript-instruction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ch02-prj1-JS-StudentRegistration.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erin-fitzpatric/javascript-instruction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erin-fitzpatric/javascript-instruction/issues"
+  },
+  "homepage": "https://github.com/erin-fitzpatric/javascript-instruction#readme"
+}
