@@ -12,31 +12,5 @@ while (addMore == ("y") || addMore == ("Y")) {
 
 // once exit, print contents of friend list
 console.log(friends);
-// prompt for Favorite Things
-// Favorite
-//  id: int
-//  thing: String (play trumpet)
-//  why: String (it's fun)
-let addFavorites = "y";
-let favoriteThings = [];
-let favoriteId = 1;
-while (addFavorites == ("y")) {
-    let newFavorite = {
-        id: favoriteId,
-        thing: readline.question("\nWhat is one of your favorite things: "),
-        why: readline.question("Why is that one of your favorite things? ")
-    };
-    favoriteId ++;
-    // add Favorite Thing to a list until done (while loop)
-    favoriteThings.push(newFavorite);
-    addFavorites = readline.question("\nAdd more favorite things? (y/n): ");
-}
-// print all favorite things
-
-for (let f of favoriteThings) {
-    for (let k of Object.keys(f)) {
-        console.log("Property: "+k+", Value: "+f[k]);
-    }
-}
 
 console.log("\nGood Bye!");
