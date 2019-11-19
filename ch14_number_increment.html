@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <h1>Welcome to the Amazing Number Incrementer!!!</h1>
+    <h3>Click + or - and be amazed by it's powers</h3>
+
+    <!-- TODO ADD THIS TO MAKE BELOW ONE FUNCTION
+    <button id="decr" onclick="doIt('decr')">-</button>
+    <input id="theNbr" type="text" value="0">
+    <button id="incr" onclick="doIt('incr')">+</button> -->
+
+    <button onclick="decrement()">-</button>
+    <input id="theNbr" type="text" value="0" size="1">
+    <button onclick="increment()">+</button>
+
+</body>
+<script>
+    // minus and plus numbers affect the value
+    // nbr value changes the style (color, italics)
+    // odd numbers - black
+    // even numbers - red
+    // divisble by 3 - italic
+    // divisble by 7 - bigger font (2.5em)
+
+    let nbr = 0;
+    function decrement() {
+        nbr--;
+        theNbr.value = nbr;
+        if (nbr % 2 == 0) {
+            theNbr.style.color = "red";
+        }
+        else {
+            theNbr.style.color = "black";
+        }
+        if (nbr % 3 == 0) {
+            theNbr.style.fontStyle = "italic";
+        }
+        else {
+            theNbr.style.fontStyle = "normal";
+        }
+        if (nbr % 7 == 0) {
+            theNbr.style.fontSize = "2.5em";
+        }
+        else {
+            theNbr.style.fontSize = "1em";
+        }
+    }
+
+    function increment() {
+        nbr++;
+        theNbr.value = nbr;
+        if (nbr % 2 == 0) {
+            theNbr.style.color = "red";
+        }
+        else {
+            theNbr.style.color = "black";
+        }
+        if (nbr % 3 == 0) {
+            theNbr.style.fontStyle = "italic";
+        }
+        else {
+            theNbr.style.fontStyle = "normal";
+        }
+        if (nbr % 7 == 0) {
+            theNbr.style.fontSize = "2.5em";
+        }
+        else {
+            theNbr.style.fontSize = "1em";
+        }
+    }
+</script>
+
+</html>

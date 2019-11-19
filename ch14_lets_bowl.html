@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's Bowl</title>
+</head>
+
+<body>
+    <!-- TODO put all of this in a table for formatting -->
+    <h1>Let's Bowl!</h1>
+    <table>
+        <tr>
+            <th><label for="frames">Frames</label></th>
+            <th>Score Summary</th>
+        </tr>
+       
+        <p id="scoreSummary">
+            Dummy frame summary
+        </p>
+
+        <label value="total">Total: </label>
+        <input id="scoreTotal" type="text" value="Score goes here!">
+        <button onclick="bowlGame()">Bowl!</button>
+    </table>
+</body>
+
+<script>
+
+    function bowlGame() {
+        let game = [];
+        let totalScore = 0;
+        // genereate array of 10 random number between 0-10
+        for (let i = 0; i < 10; i++) {
+            let randomNbr = Math.floor(Math.random() * 12);
+            game.push(randomNbr);
+            totalScore += randomNbr;
+        }
+        document.getElementById("scoreSummary").innerHTML = game;
+        scoreTotal.value = totalScore;
+    }
+
+</script>
+
+</html>
