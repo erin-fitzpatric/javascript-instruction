@@ -14,14 +14,9 @@
     <h1>Welcome to the Amazing Number Incrementer!!!</h1>
     <h3>Click + or - and be amazed by it's powers</h3>
 
-    <!-- TODO ADD THIS TO MAKE BELOW ONE FUNCTION
-    <button id="decr" onclick="doIt('decr')">-</button>
-    <input id="theNbr" type="text" value="0">
-    <button id="incr" onclick="doIt('incr')">+</button> -->
-
-    <button onclick="decrement()">-</button>
+    <button value="-1" onclick="changeNbr(this.value)">-</button>
     <input id="theNbr" type="text" value="0" size="1">
-    <button onclick="increment()">+</button>
+    <button value="1" onclick="changeNbr(this.value)">+</button>
 
 </body>
 <script>
@@ -33,31 +28,13 @@
     // divisble by 7 - bigger font (2.5em)
 
     let nbr = 0;
-    function decrement() {
-        nbr--;
-        theNbr.value = nbr;
-        if (nbr % 2 == 0) {
-            theNbr.style.color = "red";
+    function changeNbr(clicked_value) {
+        if (clicked_value == -1) {
+            nbr--;
         }
         else {
-            theNbr.style.color = "black";
+            nbr++;
         }
-        if (nbr % 3 == 0) {
-            theNbr.style.fontStyle = "italic";
-        }
-        else {
-            theNbr.style.fontStyle = "normal";
-        }
-        if (nbr % 7 == 0) {
-            theNbr.style.fontSize = "2.5em";
-        }
-        else {
-            theNbr.style.fontSize = "1em";
-        }
-    }
-
-    function increment() {
-        nbr++;
         theNbr.value = nbr;
         if (nbr % 2 == 0) {
             theNbr.style.color = "red";

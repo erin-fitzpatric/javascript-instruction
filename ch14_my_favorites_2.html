@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1>My Favorites</h1>
+
+    <label>Favorite ID: </label><input type="text" id="id_in" value="" style="display: inline-block;"><br>
+    <label>Favorite Thing: </label><input type="text" id="thing_in" value="" style="display: inline-block;"><br>
+    <label>Favorite Why?: </label><input type="text" id="why_in" value="" style="display: inline-block;"><br><br>
+
+    <button onclick="addFavorite()">Add Favorite</button><br>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Favorite</th>
+                <th>Why?</th>
+            </tr>
+        </thead>
+        <tbody id="tbFav">
+
+        </tbody>
+    </table>
+</body>
+
+<script>
+    let favorites = [];
+    displayTable();
+
+    function addFavorite() {
+        let id_cntl = document.getElementById("id_in");
+        let thing_cntl = document.getElementById("thing_in");
+        let why_cntl = document.getElementById("why_in");
+        let favorite = {
+            id: id_cntl.value,
+            thing: thing_cntl.value,
+            why: why_cntl.value
+        };
+        // add favorite to array of favorites
+        favorites.push(favorite);
+        // displays table using displayTable()
+        displayTable(favorites);
+
+        // clear value in text box
+        id_cntl.value = "";
+        thing_cntl.value = "";
+        why_cntl.value = "";
+    }
+
+
+    function displayTable() {
+        let tbdy = document.getElementById("tbFav");
+        let id_val = 'n/a';
+        let thing_val = 'No favorites yet!';
+        let why_val = "n/a";
+        tbdy.innerHTML = "";
+        if (favorites.length != 0) {
+            //yes -create rows of favorites
+            for (let favorite of favorites) {
+                addTableBodyRow(tbdy, favorite.id, favorite.thing, favorite.why)
+            }
+        }
+        else {
+            addTableBodyRow(tbdy, id_val, thing_val, why_val);
+        }
+
+        function addTableBodyRow(tbdy, id_val, thing_val, why_val) {
+            let tr = document.createElement('tr');
+
+            let td1 = document.createElement('td');
+            td1.appendChild(document.createTextNode(id_val))
+            tr.appendChild(td1);
+
+            let td2 = document.createElement('td');
+            td2.appendChild(document.createTextNode(thing_val))
+            tr.appendChild(td2);
+
+            let td3 = document.createElement('td');
+            td3.appendChild(document.createTextNode(why_val))
+            tr.appendChild(td3);
+
+            tbdy.appendChild(tr);
+        }
+    }
+</script>
+
+</html>

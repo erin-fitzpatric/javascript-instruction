@@ -20,8 +20,8 @@
         </tr>
         <tr>
             <td><input id="inputId" type="text" value="" placeholder="leave blank"></td>
-            <td><input id="inputFavorite" type="text" value="" placeholder="favorite thing"></td>
-            <td><input id="inputWhy" type="text" value="" placeholder="your reason"></td>
+            <td><input id="thing_in" type="text" value="" placeholder="favorite thing"></td>
+            <td><input id="why_in" type="text" value="" placeholder="your reason"></td>
             <td><button onclick="addFavorite()">Add Favorite</button></td>
         </tr>
     </table>
@@ -35,8 +35,8 @@
     function addFavorite() {
         let newFavorite = {
             id: favoriteId,
-            thing: document.getElementById("inputFavorite").value,
-            why: document.getElementById("inputWhy").value
+            thing: document.getElementById("thing_in").value,
+            why: document.getElementById("why_in").value
         };
         favoritesList.push(newFavorite);
         
