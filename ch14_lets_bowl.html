@@ -13,17 +13,28 @@
     <h1>Let's Bowl!</h1>
     <table>
         <tr>
-            <th><label for="frames">Frames</label></th>
+            <img src="https://www.aboveallbowling.com/uploads/9/4/1/1/94112117/s858304169243572772_p718_i15_w900.png" alt="Bowling Ball" style="width: 10cm;">
+        </tr>
+        <tr>
+            <th style="text-align: left;"><label for="frames">Frames</label></th>
             <th>Score Summary</th>
         </tr>
-       
-        <p id="scoreSummary">
-            Dummy frame summary
-        </p>
+        <tr>
+            <td>
+                <p id="scoreSummary">
+                    Dummy frame summary
+                </p>
+            </td>
+            <td><label value="total">Total: </label>
+                <input id="scoreTotal" type="text" value="Score goes here!">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="bowlGame()">Bowl!</button>
+            </td>
+        </tr>
 
-        <label value="total">Total: </label>
-        <input id="scoreTotal" type="text" value="Score goes here!">
-        <button onclick="bowlGame()">Bowl!</button>
     </table>
 </body>
 

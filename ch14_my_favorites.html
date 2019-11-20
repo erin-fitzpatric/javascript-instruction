@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Favorites</title>
+</head>
+
+<body>
+    <h1>Favorite Things</h1>
+    <!-- display 3 labels and matching input boxes 
+    for fields of a favorite:  id, favorite, why -->
+    <table id="favoritesTable">
+        <tr>
+            <th>Favorite ID</th>
+            <th>Favorite Thing</th>
+            <th>Why?</th>
+        </tr>
+        <tr>
+            <td><input id="inputId" type="text" value="" placeholder="leave blank"></td>
+            <td><input id="inputFavorite" type="text" value="" placeholder="favorite thing"></td>
+            <td><input id="inputWhy" type="text" value="" placeholder="your reason"></td>
+            <td><button onclick="addFavorite()">Add Favorite</button></td>
+        </tr>
+    </table>
+
+</body>
+<script>
+    // When user clicks 'add' button, create instance of favorite, add it to a list of favorites, 
+    // then display the list of favorites in a table
+    let favoriteId = 1;
+    let favoritesList = [];
+    function addFavorite() {
+        let newFavorite = {
+            id: favoriteId,
+            thing: document.getElementById("inputFavorite").value,
+            why: document.getElementById("inputWhy").value
+        };
+        favoritesList.push(newFavorite);
+        
+        //Insert new row into table 
+        let table = document.getElementById("favoritesTable");
+        let row = favoritesTable.insertRow(-1);
+        let cell1 = row.insertCell(-1);
+        let cell2 = row.insertCell(-1);
+        let cell3 = row.insertCell(-1);
+
+        cell1.innerHTML = favoriteId;
+        cell2.innerHTML = newFavorite.thing;
+        cell3.innerHTML = newFavorite.why;
+
+        favoriteId++;
+    }
+</script>
+
+</html>
