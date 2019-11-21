@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Let's Bowl</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,8 @@
     <h1>Let's Bowl!</h1>
     <table>
         <tr>
-            <img src="https://www.aboveallbowling.com/uploads/9/4/1/1/94112117/s858304169243572772_p718_i15_w900.png" alt="Bowling Ball" style="width: 10cm;">
+            <img src="https://www.aboveallbowling.com/uploads/9/4/1/1/94112117/s858304169243572772_p718_i15_w900.png"
+                alt="Bowling Ball" style="width: 10cm;">
         </tr>
         <tr>
             <th style="text-align: left;"><label for="frames">Frames</label></th>
@@ -49,7 +51,10 @@
             game.push(randomNbr);
             totalScore += randomNbr;
         }
-        document.getElementById("scoreSummary").innerHTML = game;
+        //JSON document.getElementById("scoreSummary").innerHTML = game;
+        // jQuery
+        $("#scoreSummary").text(game);
+
         scoreTotal.value = totalScore;
     }
 

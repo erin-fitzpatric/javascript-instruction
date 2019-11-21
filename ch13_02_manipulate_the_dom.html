@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <p>One</p>
-    <p>Two</p>
-    <p>Three</p>
+    <p id="1">One</p>
+    <p id="2">Two</p>
+    <p id="3">Three</p>
 
-    <script>
+   <!-- This is the script before jQuery -->
+    <!-- <script>
         let paragraphs = document.body.getElementsByTagName("p");
         // insert node (first arg) before node (second arg)
         document.body.insertBefore(paragraphs[2], paragraphs[0]);    
+    </script> -->
+    
+    <!-- This is the script with jQuery -->
+    <script>
+       $("#1").insertBefore("#3");
     </script>
 </body>
 </html>
